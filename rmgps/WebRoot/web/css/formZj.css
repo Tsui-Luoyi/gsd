@@ -1,0 +1,55 @@
+@CHARSET "UTF-8";
+
+  img 
+        {
+            border:none;
+        }
+        ul, ul li
+        {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        ul li.first
+        {
+            border-top: 1px solid #DFDFDF;
+        }
+        ul li.last
+        {
+            border: none;
+        }
+        ul p
+        {
+            float: left;
+            margin: 0;
+            width: 310px;
+        }
+        ul h3
+        {
+            float: left;
+            font-size: 14px;
+            font-weight: bold;
+            margin: 0px 0 0 0;
+            width: 200px;
+            margin-left:20px;
+        }
+        ul li
+        {
+            border-bottom: 1px solid #DFDFDF;
+            padding: 15px 0;
+            width:600px;
+            overflow:hidden;
+        }
+        ul input[type="text"], ul input[type="password"]
+        {
+            width:300px;
+            padding:5px;
+            position:relative;
+            border:solid 1px #666;
+            -moz-border-radius:5px;
+            -webkit-border-radius:5px;
+        }
+        ul input.required 
+        {
+            border: solid 1px #f00;
+        }

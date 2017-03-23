@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.jsd.web.po.Tagent" table="tagent" catalog="com_jsd_rmgps30">
+		<id name="id">
+			<generator class="identity"></generator>
+		</id>
+		<property name="user_id"></property>
+		<property name="agent_name"></property>
+		<property name="lock_privilege"></property>
+		<property name="vid"></property>
+		<property name="level"></property>
+		<property name="parent_id"></property>
+		<property name="remark"></property>
+	</class>
+	<query name="findAgentByUserid">
+		<![CDATA[ from Tagent where user_id = ?]]>
+	</query>
+</hibernate-mapping>    

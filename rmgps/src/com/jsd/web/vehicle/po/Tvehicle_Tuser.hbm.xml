@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.jsd.web.vehicle.po.Tvehicle_Tuser" table="tvehicle_tuser" catalog="com_jsd_rmgps30">
+		<id name="id" type="java.lang.Integer" column="id">
+			<generator class="identity"></generator>
+		</id>
+		<property name="vid" type="java.lang.Integer" column="vid"></property>
+		<property name="vno" type="java.lang.String" column="vno"></property>
+		<property name="vname" type="java.lang.String" column="vname"></property>
+		<property name="org_no" type="java.lang.Integer" column="org_no"></property>
+		<property name="agent_id" type="java.lang.Integer" column="agent_id"></property>
+	</class>
+	
+</hibernate-mapping>    

@@ -1,0 +1,22 @@
+.fenye_div1 {	font-size: 14;height: 24px;width:294px;float: left;}
+.fenye_div2 {float: right;font-size: 14;}
+.fenye_div1 a {text-decoration: none;float: left;}
+.fy {padding-left: 6px;padding-right: 6px;}
+.fy1 {	width:57px;}
+.fygg {border: 1px gray solid;padding-bottom:1px;padding-top: 2px;	text-align: center;}
+.forward_num {border: 0px;width:26px;	height: 14px;	text-align: center;}
+#spanPageNum {margin-top: 2px;margin-left: 8px;}
+#spanTotalPage {margin-top: 2px;margin-right: 6px;}
+#forward_d,#forward_ye{	background-color: #ADFF2F;}
+#forward_s,#forward_ye,#spanPre,#spanLast{margin-left: -1px;}
+#forward_ok {margin-left: -1px;background-color: #218868;color: white;cursor: pointer;}
+.leftdirection {  
+    width:0;height:0;line-height:0;border-width:5px;  
+    border-color: transparent #CD6600 transparent transparent;  
+    margin-top: 2px;border-style:solid;
+}  
+.rightdirection {  
+    width:0;height:0;line-height:0;border-width:5px;
+    border-color:transparent transparent transparent #CD6600; 
+    margin-top: 2px;border-style:solid;
+}

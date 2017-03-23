@@ -1,0 +1,184 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<!--解决乱码    -->
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	
+	 <package name="web" extends="json-default" namespace="">
+	    <action name="loginAction" class="loginAction" method="loginValidate">
+	     	<result name="success">/web/Frameset.html</result>
+	     	<result name="loginerror">/web/login/login.jsp</result>
+	    </action>
+	    <action name="modifyPwdAction" class="loginAction" method="modifyPwd">
+	     	<result name="success">/web/Frameset.html</result>
+	    </action>
+	    <action name="logoutAction" class="com.jsd.web.login.action.LogoutAction" method="logout">
+	     	<result name="success">/web/login/login.jsp</result>
+	    </action>
+	    <!-- 整车列表显示 -->
+	    <action name="VehicleAction_*" class="vehicleAction" method="{1}">
+	    	<result name="success" >/web/vehicleinfo/vehicleList.jsp</result>
+	     	<result name="home" >/web/vehicleinfo/newVehicleList.jsp</result>
+	     	<!-- 分页 查询-->
+			<result name="vehiclelist2" type="json">
+				<param name="root">pageResponseBean</param>
+			</result>
+	    </action>
+	    <!-- 整车列表打印下载 -->
+	    <action name="VehiclePrintAction_*" class="vehicleAction" method="{1}" />
+	    <!-- 007地图测试版 -->
+	    <action name="testMnCurrentInfoAction_*" class="testMnAction" method="{1}">
+	        <result name="baiduSuccess">/web/vehicleinfo7/BaiduVehicleMapInfo.jsp</result>
+	        <result name="googleSuccess">/web/vehicleinfo7/GoogleVehiclemapinfo.jsp</result>
+	        <result name="gaodeSuccess">/web/vehicleinfo7/GaodeVehiclemapinfo.jsp</result>
+	    </action>
+	    <!--在地图上添加标注-->
+	    <action name="VehicleAddRemarkerAction" class="vehicleAction" method="addRemarker">
+	    	<result name="addremarkerSUCCESS" type="json">
+	    		<param name="root">result</param>
+	    	</result>
+	    </action>
+	    <!--在地图上删除标注-->
+	    <action name="VehicleRemoveRemarkerAction" class="vehicleAction" method="removeRemarker">
+	    	<result name="removeremarkerSUCCESS" type="json">
+	    		<param name="root">result</param>
+	    	</result>
+	    </action>
+	    <!--获取地图上标注-->
+	    <action name="VehicleQueryRemarkerAction" class="vehicleAction" method="queryRemarker">
+	    	<result name="queryRemarkerSUCCESS" type="json">
+	    		<param name="root">remarkerBean</param>
+	    	</result>
+	    </action>
+	    <!--整车地图显示-->
+	    <action name="VehicleMapAction_*" class="vehicleAction" method="{1}">
+	     	<result name="success" >/web/vehicleinfo/vehiclemap.jsp</result>
+	     	<result name="baidusuccess" >/web/vehicleinfo/vehicleBaidumap.jsp</result>
+	    </action>
+	    <!--代理商管理-->
+	    <action name="AgentManageAction" class="agentAction" method="queryListAgentInfo">
+	     	<result name="success" >/web/vehicleinfo/agentList.jsp</result>
+	    </action>
+	    <action name="VehicleManageAction" class="agentAction" method="queryVehicleOfAgent">
+	     	<result name="success" >/web/vehicleinfo/vehicleManageTop.jsp</result>
+	    </action>
+	    <action name="getVehiclesAction" class="agentAction" method="getVehicles">
+	     	<result name="success" >/web/vehicleinfo/vehicleManageMain.jsp</result>
+	    </action>
+	    <action name="searchVehiclesAction4oneAgent" class="agentAction" method="searchVehicles4oneAgent">
+	     	<result name="success" type="json">
+	     		<param name="root">oneAgentBean</param>
+			</result>
+	    </action>
+	    <action name="searchVehiclesAction4noAgent" class="agentAction" method="searchVehicles4noAgent">
+	     	<result name="success" type="json">
+	     		<param name="root">noAgentBean</param>
+			</result>
+	    </action>
+	    <action name="resetVehiclesAction" class="agentAction" method="resetVehicles">
+	     	<result name="success" >/web/vehicleinfo/vehicleManageMain.jsp</result>
+	    </action>
+	    <action name="DeleteAgentAction" class="agentAction" method="deleteAgent">
+	    </action>
+	    <action name="InsertAgentAction" class="agentAction" method="insertAgent">
+	    </action>
+	    <action name="ModifyAgentAction" class="agentAction" method="modifyAgent">
+	    </action>
+	    <action name="getAgentByAgentName" class="agentAction" method="getAgentByAgentName">
+	    </action>
+	    <action name="getUserByUserCode" class="agentAction" method="getUserByUserCode">
+	    </action>
+	    <action name="getAgentUserByUserId" class="agentAction" method="getAgentUserByUserId">
+	    </action>
+	    <!--Logo上传-->
+		<action name="uploadAction_*" class="uploadAction" method="{1}">
+			<result name="input">/web/vehicleinfo/upload.jsp</result>
+		</action>
+	    <!-- 历史轨迹回放 -->
+	    <action name="mnTrackHistoryAction_*" class="mnAction" method="{1}">
+	    	<result name="baiduSuccess">/web/vehicleinfo7/vehicleBaidumapDetailTrackPlay.jsp</result>
+	    </action>
+	    <!-- 终端登录历史 -->
+	    <action name="mnLoginHistoryAction" class="mnAction" method="findLoginHistoryInfo">
+	    	<result name="success">/web/vehicleinfo7/loginHistoryInfo.jsp</result>
+	    </action>
+	    <!-- 采集设置命令 -->
+	     <action name="mnCmdAction" class="mnAction" method="findCmdInfo">
+	    	<result name="success">/web/vehicleinfo7/terminalControlCmd.jsp</result>
+	    	<result name="LYBVSUCCESS">/web/vehicleinfo7/terminalControlCmdLYBV.jsp</result>
+	    	<result name="LYBSUCCESS">/web/vehicleinfo7/terminalControlCmdLYB.jsp</result>
+	    </action>
+	    <action name="mnCmdHistoryAction" class="mnAction" method="findCmdHistoryInfo">
+	    	<result name="success">/web/vehicleinfo7/cmdHistoryInfo.jsp</result>
+	    </action>
+	    <action name="sendGatherCmdAction" class="mnAction" method="sendGatherCmd">
+	    	<result name="success">/web/vehicleinfo/jqueryreturn.jsp</result>
+	    </action>
+	    <action name="sendSettingCmdAction" class="mnAction" method="sendSettingCmd">
+	    	<result name="success">/web/vehicleinfo/jqueryreturn.jsp</result>
+	    </action>
+	    <action name="sendCancelCmdAction" class="mnAction" method="sendCancelCmd">
+	    	<result name="success">/web/vehicleinfo/jqueryreturn.jsp</result>
+	    </action>
+		<!-- 终端续费管理（此功能目前只对勤牛开放） -->
+		<action name="terminalRenew" class="terminalRenew" method="findTerminalRenew">
+	    	<result name="success">/web/vehicleinfo/terminalRenew.jsp</result>
+	    </action>
+	    <action name="modifyTerminalRenew" class="terminalRenew" method="modifyTerminalRenew">
+	    	<result name="success">/web/vehicleinfo/operateResult.jsp</result>
+	    	<result name="findAll">/web/vehicleinfo/terminalRenew.jsp</result>
+	    </action>
+			    
+	    <!-- 车辆详情映射 -->
+	    <action name="VehicleOfProtocal" class="vehicleOfProtocal" method="readVehProXML">
+	    	<result name="Third_7">/web/vehicleinfo7/mini007Frameset.jsp</result>
+	    </action>
+	    <!-- 尹志刚；紧急状态 -->
+	    <action name="vehicleMnAction_*" class="vehicleMnAction" method="{1}">
+	    	<result name="success">/web/vehicleinfo/emergentList.jsp</result>
+	    	<result name="emergent" type="json">
+				<param name="root">pageResponseBean</param>
+			</result>
+	    </action>
+	    <!-- 整机档案 -->
+	    <action name="VehicleRecordAction007" class="VehicleRecord007" method="findVehicleRecord007">
+	    	<result name="Success">/web/vehicleinfo7/vehicleRecord2.jsp</result>
+	    </action>
+	    <action name="modifyEngineNoAction007" class="VehicleRecord007" method="modifyEngineNo007">
+	    	<result name="SUCCESS" type="json">
+				<param name="includeProperties">msg</param>
+			</result>
+	    </action>
+	     <action name="VehicleRecordActionD007" class="VehicleRecord007" method="findDevtermRecord007">
+	    	<result name="success" type="json">
+	     		<param name="root">devtermInfo</param>
+			</result>
+	    </action>
+	      <action name="VehicleRecordActionO007" class="VehicleRecord007" method="findOtherRecord007">
+	    	<result name="success" type="json">
+	     		<param name="root">OtherInfoVo</param>
+			</result>
+	    </action>
+	    <!-- 车辆管理 -->
+	    <action name="vehicleManageAction_*" class="vehicleManageAction" method="{1}">
+	    	<result name="success">/web/vehicleinfo/vehicleManage.jsp</result>
+	    	<result name="queryAgent" type="json">
+	     		<param name="root">agentResponseBean</param>
+			</result>
+			<result name="manageSubmit1" type="json">
+	     		<param name="root">agentResponseBean</param>
+			</result>
+			<result name="manageSubmit2" type="json">
+	     		<param name="root">agentResponseBean</param>
+			</result>
+			<result name="toRight" type="json">
+	     		<param name="root">agentResponseBean</param>
+			</result>
+			<result name="toLeft" type="json">
+	     		<param name="root">agentResponseBean</param>
+			</result>
+	    </action>
+	 </package>
+</struts>

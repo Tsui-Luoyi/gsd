@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>frameMid.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <style type="text/css">
+	<!--
+		body {
+			margin:0;
+		}
+		#bar{
+			background-color:#EBF4FD;
+			border-right:1px solid #ADCAE6;
+			padding-top:200px;
+			height:120%;
+		}
+		#unexpand{
+			display:none;
+		}
+	-->
+	</style>
+	<script language="JavaScript" type="text/JavaScript">
+		var hadExpanded=true;
+		function expand_Button()
+		{
+			var expand = document.getElementById("expand");
+			var unexpand = document.getElementById("unexpand");
+			if(hadExpanded)
+			{
+				window.top.document.getElementById('bodyFrame').cols = "0,9,*";
+				hadExpanded = false;
+				expand.style.display = "none";
+				unexpand.style.display = "block";
+			}else{
+				window.top.document.getElementById('bodyFrame').cols = "191,9,*";
+				hadExpanded = true;
+				expand.style.display = "block";
+				unexpand.style.display = "none";
+			}
+		}
+	</script>
+
+  </head>
+  
+  <body>
+    <div id="bar">
+		<div id="expand"><a href="javascript:void(0);" onClick="expand_Button()"><img src="../images/left_frame_Rightbutton.gif" height="91" border="0" hspace="1" width="6" name="Image1"></img></a></div>
+		<div id="unexpand"><a href="javascript:void(0);" onClick="expand_Button()"><img src="../images/left_frame_Leftbutton.gif" height="91" border="0" hspace="1" width="6" name="Image2"></img></a></div>
+	</div>
+  </body>
+</html>

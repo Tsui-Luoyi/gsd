@@ -1,0 +1,71 @@
+div {float: left;}
+/*id选择器*/
+#dh_div {width: 100%;height: 32px;font-size: 14;margin-top: -2px;}	
+#cmd_div {width: 100%;height: 94px;font-size: 14;	}
+#sx_div {width:90px;height: 90px;	float: right;cursor: pointer;padding-top: 30px;}
+#map_info_div{width:100%;height:50px;background-color:#FFF4BF;padding-top:7px;font-size: 14;}
+#map_nei_div {	width: 100%;	height: 425px;margin-top: 3px;z-index: -100;display: none;}
+#login_nei_find_div {	width: 50%;}
+#login_find_div {width:100%;height: 35px;background-image: url("../images/lan.gif");
+							margin-top: 3px;overflow: hidden;border: 1px solid white;}
+#login_nei_div {	width: 100%;border: 1px solid gray;}
+#listtable {width: 100%;}
+#listtable thead tr{background-color: black;color: white;height: 30px;font-size:14;	text-align: center;font-weight:bold;}
+#listtable tbody tr{height: 10px;}
+#login_page_div {height: 35px;	width: 100%;	padding-top:10px;}
+#show_hide_div {float:right;}
+#show_hide {margin-top:7px;width:70px;height:25px;margin-right: 10px;}
+#map_play_div {background-image: url("../images/BF_BG.png");
+							width: 810px;height: 70px;margin-top: -75px;z-index: 100;display: none;}
+#kaishi {	margin-left: 18px;	margin-bottom: 10px;}
+#jieshu {	margin-left: 5px;margin-bottom: 10px;}
+#bofang {	margin-top: 2px;margin-left: 7px;}
+#zanting {	margin-bottom: 10px;margin-left: 16px;}
+#tingzhi {margin-bottom: 10px;margin-left: 40px;}
+#houtui {margin-bottom: 10px;margin-left: 39px;}
+#qianjin {margin-bottom: 10px;margin-left: 37px;}
+#chazhao {margin-bottom: 7px;margin-left: 25px;}
+#guiji {margin-left: 15px;margin-bottom: -5px;}
+#loadmap {margin-top: 5px;display: none;}
+#zjda {display: none;}
+/*class选择器*/
+.inp {	width: 20px;float: left;text-align: center;}
+.sel {width: 65px;float: left;}
+.cmd_nei_div_1 {width: 280px;height: 80px;}
+.cmd_nei_div_2 {width: 272px;height: 80px;}
+.cmd_nei_div_3 {width: 315px;height: 90px;}
+.fg_img {width:1px;height: 80px;background-image: url("../images/Feng_line.png");
+	float: left;margin-left: -12px;margin-top: 8px;}
+.mapinfo_div_1 {margin-left: 10px;width: 450px;margin-top: -2px;}
+.mapinfo_div_2 {margin-left: 15px;width: 350px;}
+.mapinfo_div_3 {float: right;margin-right: 15px;width: 80px;}
+.jzdt_img {margin-bottom: -3px;}
+.jzdt_wz {font-weight: bold;cursor: pointer;color: #4169E1;}
+.probarclass {width:203px;height:9px;background:url("../images/huiprobar.png") no-repeat;margin-left:8px;margin-top:3px;}
+.probarclass div{ width:0px; height:8px; background:url("../images/probar.png") no-repeat;
+	color:#fff; 	text-align:center; font-family:Tahoma;font-size:8px;}
+.proxinclass {
+	width:203px;height:15px;background:url("../images/xing_hui.png") no-repeat;margin-left: 8px;margin-top: -3px;}
+.proxinclass div{width:0px;height:14px;background:url("../images/xing_cheng.png") no-repeat;}
+.label_pic {font-weight: bold;float: left;}
+.d1 {width: 100%;}
+.d2 {width: 100%;margin-top: 8px;}
+.timeinp {	width: 70px;margin-top: 7px;float: left;}
+.timeinp2 {	width: 125px;margin-bottom: 11px;}
+.timeinp3 {width: 135px;background-color: #1E90FF;float: left;height: 19px;
+	margin-top: 2px;margin-left: -3px;text-align: center;padding-top: 2px;}
+.cj_img {	float: left;margin-left: -3px;cursor: pointer;}
+.sscz_div {	float: left;margin-left: 15px;margin-top: 7px;}
+.sscz {	float: left;margin-left: 7px;cursor: pointer;}
+.cjsz_div {	float: left;margin-top: 7px;}
+.img_btn {	cursor: pointer;	}
+.ksjs {margin-left: 15px;font-weight: bold;color: #FF6347;border: 0px;margin-top: 8px;float: left;}
+.pt {color: gray;margin-left: 5px;margin-top: 5px;	float: left;}
+.qx_div {background-color: #4682B4;margin-top: 2px;text-align: center;width: 75px;height: 19px;
+	padding-top: 3px;cursor: pointer;}
+.wz_label {	margin-top: 5px;float: left;}
+.gzxx {color: #4169E1;}
+.kdkz_div {	width: 1000px;margin-top: -15px;overflow: hidden;border: 1px solid white;}
+.bgcolor_1 {background-color: #FFF5EE;}
+.guding_div {width: 100%;border: 1px solid white;overflow: hidden;}
+

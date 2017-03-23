@@ -1,0 +1,27 @@
+#bodycss{margin:0px;padding:0px;font-family:Arial, Helvetica, sans-serif;}
+.ZJDA{position:absolute;top:50%;left:50%;height:438px;width:740px;margin-left: -370px;margin-top: -220px;}
+.ZJDA div{float:left;list-style-position:inside;list-style-type:none;}
+.ZJDA .Mzhong li{float:left;list-style-position:inside;list-style-type:none;}
+.ZJDA .Mleftbg{background-image:url(../images/MjiaoL.png);background-repeat:no-repeat;height:438px;width:28px;}
+.ZJDA .Mzhong{background-image:url(../images/BG2.png);background-repeat:no-repeat;height:438px;width:712px;}
+.ZJDA .top{width:684px;height:100px;}
+.ZJDA .Mzhong .B1{font-size:16px;font-weight: bold;color:#272727;position:relative;top:32px;left:300px;}
+.ZJDA .Mzhong .B2{position:relative;top:14px;left:530px}
+.ZJDA .zhu{width:684px;}
+.ZJDA .tu{width:320px;font-size:14px;float:left;}
+.ZJDA .main{width:320px;font-size:14px;float:right;position:relative;top:-20px;}
+.ZJDA .tu li{width:320px;float:none;margin:2px 0px 35px 0px;}
+.ZJDA .main li{width:320px;float:none;margin:2px 0px 6px 0px;}
+.ZJDA .main .line a{cursor: pointer;}
+.ZJDA .main li i{margin-left:28px;}
+#Image2,#Image3{position:absolute;}
+input{border:1px solid #D6D6D6;color:#999;}
+.ZJDA .main .line{border-bottom:2px solid #0E4AA6;}
+.ZJDA .main .line b{position:relative;top:20px;}
+.ZJDA .main .line a font{position:relative;top:2px;color:#E6F7FF;text-decoration:none;letter-spacing:4px;float:right;padding:2px 0px 0px 12px;margin:0px 0px 0px 3px;font-size:9pt;background-image:url(../images/anleft.png);background-repeat:no-repeat;line-height:17px;}
+.ZJDA .main .line a img{position:absolute;}
+.ZJDA .main .line a font span{position:relative;top:-2px;width:5px;height:17px;background-image:url(../images/anright.png);background-repeat: no-repeat;background-position:right;}
+.ZJDA .main .line a:hover font{color:#AFDAE7;background-image:url(../images/anleft2.png);background-repeat:no-repeat;}
+.ZJDA .main .line a:hover font span{background-image:url(../images/anright2.png);background-repeat: no-repeat;}
+.ZJDA .main font{padding-left:30px;}
+textarea{border:1px solid #D6D6D6;color:#999;}

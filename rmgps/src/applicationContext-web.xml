@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+
+	 <!--根据用户、组织、车辆关系查询车辆列表 -->
+	 <bean id="auUserDao" class="com.jsd.web.authority.dao.impl.AuUserDAOImpl">
+	  <property name="hibernateTemplate">
+	      <ref bean="hibernateTemplate"/>
+	    </property>
+     </bean>
+     <!-- 图片上传 -->
+     <bean id="uploadAction" class="com.jsd.web.util.UploadAction" />
+  	 <!--Member DAO -->
+	 <bean id="userDao" class="com.jsd.web.login.dao.impl.UserDAOImpl">
+	  <property name="hibernateTemplate">
+	      <ref bean="hibernateTemplate"/>
+	    </property>
+     </bean>
+     <bean id="userService" class="com.jsd.web.login.service.impl.UserServiceImpl" >
+       <property name="userDao" ref="userDao"/>
+       <property name="loginHistoryDao" ref="loginHistoryDao"/>
+     </bean>
+     <bean id="loginAction" class="com.jsd.web.login.action.LoginAction" scope="request">
+       <property name="userService1" ref="userService"/>
+        <property name="vehicleService" ref="vehicleService"/>
+     </bean>
+     <bean id="loginHistoryDao" class="com.jsd.web.login.dao.impl.LoginHistoryDAOImpl" >
+	  <property name="hibernateTemplate">
+	      <ref bean="hibernateTemplate"/>
+	    </property>
+     </bean>
+     <!--vehicle DAO -->
+	 <bean id="vehicleDao" class="com.jsd.web.vehicle.dao.impl.VehicleDAOImpl" >
+	  <property name="hibernateTemplate">
+	      <ref bean="hibernateTemplate"/>
+	    </property>
+     </bean>
+     <bean id="vehicleService" class="com.jsd.web.vehicle.service.impl.VehicleServiceImpl" >
+       <property name="vehicleDao" ref="vehicleDao"/>
+       <property name="auUserDAO" ref="auUserDao"/>
+     </bean>
+     <bean id="vehicleAction" class="com.jsd.web.vehicle.action.VehicleAction" scope="session">
+       <property name="vehicleService" ref="vehicleService"/>
+       <property name="vehicleMnService" ref="vehicleMnService"></property>
+     </bean>
+     <bean id="agentAction" class="com.jsd.web.vehicle.action.AgentManageAction" scope="session">
+       <property name="vehicleService" ref="vehicleService"/>
+     </bean>
+     
+     <!-- map -->
+     <bean id="mapDataDao" class="com.jsd.web.map.dao.impl.MapDataDAOImpl" >
+        <property name="hibernateTemplate">
+	      <ref bean="hibernateTemplate"/>
+	    </property>
+     </bean>
+     <bean id="vehicleMapService" class="com.jsd.web.map.service.impl.MapDataServiceImpl" >
+       <property name="mapDataDao" ref="mapDataDao"/>
+     </bean>
+     
+     <!-- dict DAO -->
+     <bean id="dectDefineDao" class="com.jsd.web.common.dao.impl.DictDefineDAOImpl" >
+     	<property name="hibernateTemplate">
+     		<ref bean="hibernateTemplate"/>
+     	</property>
+     </bean>
+     
+	 <!-- vehiclerecord DAO-->
+     <bean id="vehicleRecordDao" class="com.jsd.web.vehicle.dao.impl.VehicleRecordDaoImpl" >
+     	<property name="hibernateTemplate">
+     		<ref bean="hibernateTemplate"/>
+     	</property>
+     </bean>
+     <bean id="vehicleRecordService" class="com.jsd.web.vehicle.service.impl.VehicleRecordServiceImpl" >
+     	<property name="vehicleRecordDao">
+     		<ref bean="vehicleRecordDao"/>
+     	</property>
+     </bean>
+     <bean id="vehicleOfProtocal" class="com.jsd.web.vehicle.action.VehicleOfProtocal" scope="session" /> 
+     <bean id="mnAction" class="com.jsd.web.vehicle.action.MnAction" scope="request">
+     	<property name="mnService" ref="mnService" />
+     	<property name="vehicleMapService" ref="vehicleMapService" />
+     </bean>
+     <bean id="testMnAction" class="com.jsd.test.map.testMnAction" scope="request">
+     	<property name="mnService" ref="mnService" />
+     </bean>
+     <bean id="mnService" class="com.jsd.web.vehicle.service.impl.MnServiceImpl" scope="request">
+     	<property name="mnDao" ref="mnDao" />
+     	<property name="dectDefineDao" ref="dectDefineDao" />
+     </bean>
+     <bean id="mnDao" class="com.jsd.web.vehicle.dao.impl.MnDaoImpl" scope="request">
+     	<property name="hibernateTemplate" ref="hibernateTemplate" />
+     </bean>
+     <!-- 终端续费 -->
+     <bean id="terminalRenew" class="com.jsd.web.vehicle.action.TerminalRenewAction" scope="request">
+     	<property name="terminalRenewService" ref="terminalRenewService" />
+     </bean>
+     <bean id="terminalRenewService" class="com.jsd.web.vehicle.service.impl.TerminalRenewServiceImpl">
+     	<property name="terminalRenewDao" ref="terminalRenewDao" />
+     	<property name="vehicleDao" ref="vehicleDao" />
+     	<property name="auUserDAO" ref="auUserDao" />
+     </bean>
+     <bean id="terminalRenewDao" class="com.jsd.web.vehicle.dao.impl.TerminalRenewDaoImpl" >
+     	<property name="hibernateTemplate" ref="hibernateTemplate" />
+     </bean>
+     <!-- 紧急状态 -->
+     <bean id="vehicleMnAction" class="com.jsd.web.vehicle.action.VehicleMnAction" scope="session">
+     	<property name="vehicleMnService" ref="vehicleMnService"></property>
+     </bean>
+     <bean id="vehicleMnService" class="com.jsd.web.vehicle.service.impl.VehicleMnServiceImpl">
+     	<property name="vehicleMnDao" ref="vehicleMnDao"></property>
+     </bean>
+     <bean id="vehicleMnDao" class="com.jsd.web.vehicle.dao.impl.VehicleMnDaoImpl">
+     	<property name="hibernateTemplate" ref="hibernateTemplate" />
+     </bean>
+       <!--修改后的整机档案 -->
+     <bean id="VehicleRecord007" class="com.jsd.web.vehicle.action.VehicleRecordAction007" scope="session">
+       <property name="vehicleRecordService" ref="vehicleRecordService"/>
+     </bean>
+     <!-- 车辆管理 -->
+     <bean id="vehicleManageAction" class="com.jsd.web.vehicle.action.VehicleManageAction" scope="session">
+     	<property name="vehicleManageService" ref="vehicleManageService"></property>
+     	<property name="vehicleService" ref="vehicleService"/>
+     </bean>
+     <bean id="vehicleManageService" class="com.jsd.web.vehicle.service.impl.VehicleManageServiceImpl">
+     	<property name="vehicleManageDao" ref="vehicleManageDao"></property>
+     </bean>
+     <bean id="vehicleManageDao" class="com.jsd.web.vehicle.dao.impl.VehicleManageDaoImpl">
+     	<property name="hibernateTemplate" ref="hibernateTemplate" />
+     </bean>
+     
+     <!-- 获取spring管理对象 -->
+    <bean class="com.jsd.web.sync.data.cmd.spring.SpringContextHolder" lazy-init="false" />
+     
+</beans>

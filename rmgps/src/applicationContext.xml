@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans> 
+  <!-- 数据源的配置 //-->
+  <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+    <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+    <!-- 113.11.194.231   192.168.10.4  192.168.10.2-->
+    <property name="url" value="jdbc:mysql://192.168.10.4:3306/com_jsd_rmgps30?useUnicode=true&amp;characterEncoding=utf8"/>
+    <property name="username" value="root"/>
+    <property name="password" value="ncutncut"/>
+    <property name="maxActive" value="100"/>
+    <property name="maxIdle" value="5"/>
+    <property name="maxWait" value="100"/>
+  </bean>
+   <bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+    <property name="dataSource" ref="dataSource"/>
+    <property name="lobHandler" ref="lobHandler" />
+    <property name="hibernateProperties">
+      <props>
+        <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+        <prop key="hibernate.show_sql">true</prop>
+        <prop key="hibernate.cglib.use_reflection_optimizer">true</prop>
+      </props>
+    </property>
+    <property name="mappingResources">
+      <list>
+	       <value>com\jsd\web\po\Tuser.hbm.xml</value>
+	       <value>com\jsd\web\po\TuserOther.hbm.xml</value>
+	       <value>com\jsd\web\po\UserMac.hbm.xml</value>
+	       <value>com\jsd\web\po\TuserRole.hbm.xml</value>
+	       <value>com\jsd\web\po\TrolePrivilege.hbm.xml</value>
+	       <value>com\jsd\web\po\Trole.hbm.xml</value>
+	       <value>com\jsd\web\po\Tprivilege.hbm.xml</value>
+	       <value>com\jsd\web\po\TorgTable.hbm.xml</value>
+	       <value>com\jsd\web\po\TorgRelTable.hbm.xml</value>
+	       <value>com\jsd\web\po\TloginHistory.hbm.xml</value>
+	       <value>com\jsd\web\po\TvehicleInfo.hbm.xml</value>
+	       <value>com\jsd\web\po\TvehicleModel.hbm.xml</value>
+	       <value>com\jsd\web\po\TvehicleClass.hbm.xml</value>
+	       <value>com\jsd\web\po\TvvBand.hbm.xml</value>
+	       <value>com\jsd\web\po\DevtermInfo.hbm.xml</value>
+	       <value>com\jsd\web\po\DevtermGroup.hbm.xml</value>
+	       <value>com\jsd\web\po\UserPrivilege.hbm.xml</value>
+	       <value>com\jsd\web\po\TroleVbizstate.hbm.xml</value>
+	       <value>com\jsd\web\po\TorgRole.hbm.xml</value>
+	       <value>com\jsd\web\po\TvOrgRel.hbm.xml</value>
+	       <value>com\jsd\web\po\DictDefine.hbm.xml</value>
+	       <value>com\jsd\web\po\LoginState.hbm.xml</value>
+	       <value>com\jsd\web\vehicle\po\History.hbm.xml</value>
+	       <value>com\jsd\web\po\Tagent.hbm.xml</value>
+	       <value>com\jsd\web\po\Mn_login_history.hbm.xml</value>
+	       <value>com\jsd\web\po\TvehicleInfo007.hbm.xml</value>
+	       <value>com\jsd\web\vehicle\po\Tagent_Tuser.hbm.xml</value>
+	       <value>com\jsd\web\vehicle\po\Tvehicle_Tuser.hbm.xml</value>
+	       <value>com\jsd\web\vehicle\po\VehicleListPO.hbm.xml</value>
+	       <!-- 准备进行优化删除的对象 -->
+	       <value>com\jsd\web\po\GpsLocateCurrent.hbm.xml</value>
+      </list>
+    </property>
+  </bean>
+
+  <!-- DAO 的IoC配置//-->
+  <bean id="hibernateTemplate" class="org.springframework.orm.hibernate3.HibernateTemplate">
+    <property name="sessionFactory" ref="sessionFactory"/>
+  </bean>
+  <bean id="lobHandler" class="org.springframework.jdbc.support.lob.DefaultLobHandler"  
+    lazy-init="true">
+  </bean>
+  <bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager" >
+    <property name="sessionFactory" ref="sessionFactory"/>
+  </bean>
+  <bean id="txProxyTemplate" abstract="true" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">    
+	   <property name="transactionManager">   
+	       <ref bean="transactionManager"/>   
+	   </property>    
+	   <property name="transactionAttributes">    
+	       <props>   
+	           <prop key="find*">PROPAGATION_REQUIRED, readOnly</prop>    
+	           <prop key="*">PROPAGATION_REQUIRED</prop>
+	       </props>    
+	   </property>    
+  </bean>
+  <import resource="applicationContext-web.xml"/>
+</beans>

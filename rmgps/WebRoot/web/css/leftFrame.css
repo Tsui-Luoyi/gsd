@@ -1,0 +1,14 @@
+body {margin: 0px;padding: 0px;font-family:Arial,Helvetica,sans-serif;}
+
+
+/*改版后的css*/
+.left_BG{width:200px;background-image: url(../images/left_BG.gif); height:100%;}
+.left_BG li{float:left;margin:8px 0px 0px 10px;}
+/*.left_BG a{width:180px;height:30px;background-image:url(../images/left_an_A.gif);font-size:12px;text-decoration:none;text-align:left;padding:10px 0px 0px 30px;color:#EAF9F2;}*/
+/*.left_BG a:hover{background-image: url(../images/left_an_B.gif); color:#155361;}*/
+.left_XZ{cursor: pointer;width:180px;height:30px;background-image: url(../images/left_an_A.gif);font-size:12px;text-decoration:none;text-align:left;padding:10px 0px 0px 30px;color:#EAF9F2;}
+.left2_on{cursor: pointer;width:180px;height:30px;background-image: url(../images/left_an_C.gif);font-size:12px;text-decoration:none;text-align:left;padding:10px 0px 0px 30px;color:#EAF9F2;}
+.left_2J{width:180px;font-size:9pt;padding:5px;}
+.left_2J p{height:20px;background-image:url(../images/left.gif);background-repeat:no-repeat;background-position:1px 10px;border-bottom:1px dashed #8D9CA9;margin:0px;color:#ED541A;padding:10px 0px 4px 12px;}
+.left_2J p a{width:150px;height:15px;background-image:url(#.gif);color:#000;padding:0px;}
+.left_2J p a:hover{background-image:url(#.gif);color:#ED541A;margin:0px;}

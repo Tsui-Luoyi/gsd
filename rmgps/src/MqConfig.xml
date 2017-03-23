@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<root>
+	<Name>MqInfo</Name>
+	<Describe>MQ服务器连接信息</Describe>
+	<Ver>1.0.0.1</Ver>
+	<Author>liujd</Author>
+	<DatePosted>2016-07-18</DatePosted>
+	<System>RCMS</System>
+	<MQBrokerURI>failover:(tcp://localhost:61616)</MQBrokerURI>
+	<RealTimeTopic>LOGIC.REALTIME</RealTimeTopic>
+	<SwitchTopic>LOGIC.SWITCH</SwitchTopic>
+	<RTSelector></RTSelector>
+	<SwitchSelector></SwitchSelector>
+</root>

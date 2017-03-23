@@ -1,0 +1,46 @@
+body{font-family:Arial, Helvetica, sans-serif;font-size:9pt;margin:0px;padding:0px;}
+table{border-collapse:collapse;border-spacing:0;padd:expression(this.cellPadding=0); width:100%;}
+table{border-top:1px solid #ECEEF1;border-right:1px solid #ECEEF1;}
+th{background-color:#FFFCEE;border-left:1px solid #ECEEF1;border-bottom:1px solid #ECEEF1;height:20px;}
+td{border-left:1px solid #ECEEF1;border-bottom:1px solid #ECEEF1;height:20px;}
+
+.Navigation{margin-bottom:5px;}
+.Navigation B{color:#0066CC;}
+.Search{line-height:50px;height:50px;background-image:url(../images/line.jpg);background-repeat:repeat-x;}
+.Search li{float:left;margin:0px 5px 0px 2px;list-style-type:none;}
+.Search a{padding:5px 10px 5px 10px;background-image:url(../images/anjiu.png);text-align:center;background-position:center;color:#FFF;	text-decoration:none;}
+.Search a:hover{background-image:url(../images/anjiu2.png);}
+.Classification{margin-bottom:35px;}
+.Classification .huang{background-image:url(../images/FraneDH_anniu.jpg);border:1px solid #E5B005;}
+.Classification a {color:#000;text-decoration:none;}
+.Classification a:hover li{text-decoration:underline;}
+.Classification li{line-height:20px;margin:2px;background-image:url(../images/FraneDH_anniu2.jpg);float:left;
+border:1px solid #E0E0E0;padding:3px 5px 0px 5px;list-style-type:none;}
+.Classification select{background:transparent;border:0px;padding: 1px;}
+.Content{}
+.msgdiv{}
+.msgdiv li{background-color:#E7F8FA;list-style-type:none;padding:3px;margin-top:1px;}
+.tablediv{background-color:#FFFCEE;height:20px;line-height:20px;}
+.tablediv B{color:#FF6600;}
+.tablediv a{color:#6C6C6C;}
+.tablediv a:hover{color:#FF6600;}
+
+.caiji a{padding:5px 10px 5px 10px;background-image:url(../images/anjiu.png);text-align:center;background-position:center;color:#FFF;	text-decoration:none;}
+.caiji a:hover{background-image:url(../images/anjiu2.png);}
+.lsgj{width:610px;line-height:40px;background-image:url(../images/gj_left.png);height:40px;}
+.lsgj li{float:left;list-style-type:none;padding-left:1px;}
+.lsgj input{margin-top:10px;}
+
+
+.Classification1{margin-bottom:5px;}
+.Classification1 .huang{background-image:url(../images/FraneDH_anniu.jpg);border:1px solid #E5B005;}
+.Classification1 a {color:#000;text-decoration:none;}
+.Classification1 a:hover li{text-decoration:underline;}
+.Classification1 li{line-height:20px;margin:2px;background-image:url(../images/FraneDH_anniu2.jpg);float:left;
+
+
+
+
+.uihf{
+	border-bottom-style: solid;
+}

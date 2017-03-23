@@ -1,0 +1,41 @@
+body {margin: 0px;padding: 0px;background-image: url(../images/logoBG.png);font-size:12px;font-family: Arial, Helvetica, sans-serif;}
+img{margin: 8px;}
+.logo{ float:left;padding: 8px;}
+div{color:#9CA5B1;}
+ul{margin: 0px;padding: 15px 20px 0px 0px;}
+li{width: 70px;list-style-type: none;float: right;text-align: center;}
+li a{color:#FFF;text-decoration: none;line-height: 20px;}
+li a:hover {background-image: url(../images/topButton.png);width:70px;height:25px;font-weight: bold;background-position: center;}
+.xingming{ color:#288CF0;}
+.Welcome{height:38px;position: absolute;right: 20px;bottom: -6px;color: #333;}
+.leftKuang img{position: absolute;left: -8px;bottom: -8px;}
+
+.Mima{display: none; background-image: url(../images/XiuMima.png);height: 76px;width: 500px;position: absolute;right: 288px;top:8px;z-index: 10000;}
+/*锟睫革拷锟斤拷锟斤拷锟侥憋拷锟斤拷锟斤拷锟斤拷*/
+/*.Mima{display: none;}*/
+.Mima ul{ margin:0px; padding:0px; width:100%;}
+.Mima .Myonghu li{width:500px;text-align: left;padding-left: 10px;}
+.Mima li{float:left;color:#C5CDCD;padding: 3px 0px 0px 10px;}
+.Mima .Mbutton li{margin: 6px 0px 0px 5px;}
+.Mima .Mtext li{ width:150px;}
+.Mima .Mtext input{width:150px;color:#65707E;border: 1px solid #437EB4;}
+.Mima .Mbutton input{background-color: #979A9B;margin: 0px;width: 50px;height:20px;border: 1px solid #383E48;background-image: url(../images/Mbutton.png);color: #C1CED2;padding: 1px 0px 0px 0px;}
+.sffocus {background-color: #DEECF3;}
+
+/*鏀圭增钖庣殑css*/
+/*.topBG{background-image: url(../images/BG.gif);height:60px;width:100%;}*/
+.topBG{background-image: url(../images/04.jpg);height:60px;width:100%;}
+#time_name span{display:block;top:-1px;left:-1px;position:absolute;color:#000;}
+#time_name{color:black;position:relative;font-size:9pt;} 
+#time_name{position:absolute;right:10px;bottom:0px;}
+.top_an li{float:right;padding:5px;font-size:12px;}
+.top_an a{background-image:url(../images/top_an_A.gif);height:26px;width:78px;border:1px solid #0547AF;text-align:center;color:#D0E2F8;text-decoration:none;padding-top:5px;}
+.top_an a:hover {background-image:url(../images/top_an_B.gif);border:1px solid #22511C;color:#2D4321;}
+.password{height:48px;border:2px solid #0A549E;position:absolute;top:2px;right:360px;background-image: url(../images/BG.gif);background-position: right 5px;z-index:100;}
+.password li input{line-height:16px;background-color:#CAE8FF;width:80px;border:1px solid #02388A;font-size:9pt;color: #00457D;}
+.password li{float:left;padding:3px;}
+.ts{width:43px;}
+.password li a{margin-top: 11px;margin-left: 5px;width:39px;height:4px;padding:2px 5px 0px 5px;border:1px solid #00509F;text-decoration:none;color:#BCDBFE;background-image: url(../images/top_an_A.gif);background-position:center;}
+.password li a:hover{width:39px;height:4px;background-image:url(../images/top_an_B.gif);background-position:center;border:1px solid #397300;color:#005700;}
+
+

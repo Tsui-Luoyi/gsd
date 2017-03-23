@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.jsd.web.vehicle.po.VehicleListPO" table="vehicle_list">
+		<id name="id" type="java.lang.Integer" column="id">
+			<generator class="identity"></generator>
+		</id>
+		<property name="vno" type="java.lang.String" column="vno"></property>
+		<property name="vid" type="java.lang.Integer" column="vid"></property>
+		<property name="vname" type="java.lang.String" column="vname"></property>
+		<property name="dno" type="java.lang.String" column="dno"></property>
+		<property name="vtype_id" type="java.lang.Integer" column="vtype_id"></property>
+		<property name="vtype_name" type="java.lang.String" column="vtype_name"></property>
+		<property name="did" type="java.lang.Integer" column="did"></property>
+		<property name="dtype_id" type="java.lang.Integer" column="dtype_id"></property>
+		<property name="dtype_name" type="java.lang.String" column="dtype_name"></property>
+		<property name="agent_id" type="java.lang.Integer" column="agent_id"></property>
+		<property name="agent_name" type="java.lang.String" column="agent_name"></property>
+		<property name="addr" type="java.lang.String" column="addr"></property>
+		<property name="emergency_state" type="java.lang.Integer" column="emergency_state"></property>
+		<property name="update_time" type="java.util.Date" column="update_time"></property>
+        <property name="offcount" type="java.lang.Integer" column="offcount"></property>
+		<property name="locate_mode" type="java.lang.String" column="locate_mode"></property>
+		<property name="longitude" type="java.lang.String" column="longitude"></property>
+		<property name="latitude" type="java.lang.String" column="latitude"></property>
+		<property name="o_lng" type="java.lang.String" column="o_lng"></property>
+		<property name="o_lat" type="java.lang.String" column="o_lat"></property>
+        <property name="level" type="java.lang.Integer" column="level"></property>
+	</class>
+</hibernate-mapping>   

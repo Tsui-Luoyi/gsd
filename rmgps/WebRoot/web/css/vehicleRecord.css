@@ -1,0 +1,14 @@
+@charset "utf-8";
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+body{font:1px/100% Arial, Helvetica, sans-serif, "新宋体";background:#C5EDFE;}
+
+/*menu开始*/
+.imenu_bg{width:915px;height:50px;margin:40px auto 0 auto;position:relative;}
+.imenu{width:304px;height:50px;line-height:50px;text-align:center;font-family:"微软雅黑";font-size:16px;cursor:pointer;color:#FFF;float:left;background:transparent url(../images/nav-bg.jpg) repeat-x;margin-right:1px;}
+.imenu a{color:#113965;text-decoration:none}
+.imenu a:hover{text-decoration:underline;}
+.imenu_on{width:304px;height:50px;background-color:#FFF;color:#015d22;cursor:pointer;float:left;line-height:50px;text-align:center;font-family:"微软雅黑";font-size:16px;margin-right:1px;font-weight:bold;}
+.imenu_on a{color:#015d22;text-decoration:none;}
+.imenu_on a:hover{color:#015d22;text-decoration:underline;}
+.submnu{width:915px;*width:915px;_width:915px;border-top:none;margin:0 auto;display:none;position:absolute;left:0px;top:50px;z-index:1000;background-color:#FFFFFF;filter:alpha(opacity=95);-moz-opacity:0.8;border-radius:0px 0px 20px 20px;}

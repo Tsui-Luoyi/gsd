@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<vehicleOfProtocalInfo>
+	<vehicle>
+		<vmid>17</vmid>
+	    <forwardTo>Third_7</forwardTo>
+	    <mname>MN-1</mname>
+	</vehicle>
+</vehicleOfProtocalInfo>
